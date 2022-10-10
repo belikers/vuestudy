@@ -1,6 +1,8 @@
 <template>
   <div>
-    <p v-if="seen">现在看到我了</p>
+    <p v-if="type == 0">现在看到我了</p>
+    <p v-else-if="type == 1">现在他看到我了</p>
+    <p v-else>你看不到我了</p>
   </div>
 </template>
 
@@ -9,7 +11,7 @@ export default {
   name: "vIf1",
   data() {
     return {
-      seen: true,
+      type: 1,
     };
   },
 };
